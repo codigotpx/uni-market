@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  /* Text */
+
+
+  /* Colores */
+  --color-primary-*: initial;
+  --color-primary-50:  #eef2f9;
+  --color-primary-100: #d4dff0;
+  --color-primary-500: #1e4a91;
+  --color-primary-700: #15305e;
+  --color-primary-900: #0a1830;
+
+  --color-gold-50:  #fdf7eb;
+  --color-gold-400: #e8a820;
+  --color-gold-500: #d4900a;
+  --color-gold-700: #9a5d00;
+
+  --color-cream-100: #faf7f2;
+
+  /* Tipografía */
+  --font-display: "DM Serif Display", Georgia, serif;
+  --font-body:    "DM Sans", system-ui, sans-serif;
+
+  /* Sombras custom */
+  --shadow-gold: 0 4px 20px -4px rgb(212 144 10 / 0.35);
+  --shadow-navy: 0 4px 20px -4px rgb(30 74 145 / 0.30);
+}
+
+/* Solo sobreescribir lo que Preflight no cubre */
+@layer base {
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-cream-100);
+    color: theme(--color-primary-900);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+.logo {
+  font-family: "Cinzel", serif;
+  font-weight: 600;
+  color: var(--gold-400);        /* dorado */
+  text-transform: uppercase;
+}
