@@ -1,6 +1,8 @@
 import { Link, useLocation } from "react-router";
 import { ShoppingCart, Search } from 'lucide-react';
 import AccountDropdown from "./AccountDropdown"
+import SearchBar from "./SearchBar"
+import "../styles/Navbar.css"
 
 const NAV_LINKS = [
         { label: "Inicio", href:"/" },
@@ -16,12 +18,13 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="w-full py-2 my-5 bg-white rounded-full flex justify-between">
-                <div className="flex flex-col justify-center items-center ml-10">
-                    <span className="text-2xl logo">Universidad</span>
-                    <span className="logo">Caribea</span>
+            <header className="w-full py-2 md:my-5 bg-white md:rounded-full md:justify-between flex">
+                <div className="flex flex-col justify-center items-center md:ml-10">
+                    <span className="text-lg md:text-2xl logo">Universidad</span>
+                    <span className="text-xs md:text-xl logo">Caribea</span>
                 </div>
-                <ul className="flex justify-center items-center gap-10">
+                <nav className="hidden justify-center items-center md:flex flex-col md:flex-row">
+                    <ul className="flex flex-col md:flex-row justify-center items-center gap-10">
                     { NAV_LINKS.map((link) => (
                         <li className={`hover:scale-110 opacity-50 transform transition duration-300 ${isActive(link.href) ? "opacity-100": ""}`} 
                             key={link.href}
@@ -38,17 +41,18 @@ const Navbar = () => {
                         </li>
                     ))}
                 </ul>
-                <div className="flex justify-center items-center mr-10 gap-3">
-                    <div className="border rounded-4xl flex items-center px-2">
-                        <input className="focus:outline-none" type="text" placeholder="Buscar..." />
-                        <Search size={15}/>
-                    </div>
+                </nav>
+                <div className="hidden md:flex justify-center items-center mr-10 gap-3">
+                    <SearchBar/>
                     <div className="flex items-center cursor-pointer hover:scale-105 transition duration-100">
                         <ShoppingCart size={15}/>
                     </div>
-                    <AccountDropdown/>
+                    <AccountDropdown className="hidden" />
                 </div>
-            </nav>
+                <div className="flex justify-center items-center ">
+
+                </div>
+            </header>
         </>
     )
 
