@@ -22,7 +22,7 @@ const Navbar = () => {
 
     return (
         <>
-            <header className="w-full py-2 md:my-5 bg-white md:rounded-full md:justify-between flex">
+            <header className="w-full fixed z-20 py-2 md:my-5 h-15 md:h-auto bg-white md:rounded-full md:justify-between flex max-w-7xl">
                 <div className="hidden md:flex flex-col justify-center items-center md:ml-10">
                     <span className="text-lg md:text-2xl logo">Universidad</span>
                     <span className="text-xs md:text-xl logo">Caribea</span>
@@ -38,7 +38,7 @@ const Navbar = () => {
                                 className={`relative pb-0.5 transition duration-300`}
                                 >
                                 {link.label}
-                                <span className={`absolute bottom-0 left-0 h-0.5 w-full bg-gold-400 transition-transform duration-300 origin-center ${
+                                <span className={`absolute bottom-0 left-0 h-0.5 w-full bg-yellow-400 transition-transform duration-300 origin-center ${
                                     isActive(link.href) ? "scale-x-100" : "scale-x-0"
                                 }`}/>
                                 </Link>
