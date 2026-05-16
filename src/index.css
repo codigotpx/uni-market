@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
-@theme {
+:root {
   /* Text */
 
 
   /* Colores */
-  --color-primary-*: initial;
+  --color-primary: initial;
   --color-primary-50:  #eef2f9;
   --color-primary-100: #d4dff0;
   --color-primary-500: #1e4a91;
@@ -33,7 +33,7 @@
   body {
     font-family: var(--font-body);
     background-color: var(--color-cream-100);
-    color: theme(--color-primary-900);
+    color: var(--color-primary-900);
   }
 
   h1, h2, h3, h4, h5, h6 {
