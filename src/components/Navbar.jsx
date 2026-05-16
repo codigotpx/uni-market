@@ -5,7 +5,7 @@ import AccountDropdown from "./AccountDropdown"
 const NAV_LINKS = [
         { label: "Inicio", href:"/" },
         { label: "Shop", href:"/shop" },
-        { label: "About us", href:"/about" }
+        { label: "Contáctenos", href:"/contact" }
 ]
 
 const Navbar = () => {
@@ -16,7 +16,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="w-full py-2 my-5 bg-white rounded-full flex justify-between">
+            <nav className="w-1px py-2 my-5 bg-white rounded-full flex justify-between">
                 <div className="flex flex-col justify-center items-center ml-10">
                     <span className="text-2xl logo">Universidad</span>
                     <span className="logo">Caribea</span>
