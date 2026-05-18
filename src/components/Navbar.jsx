@@ -44,7 +44,7 @@ const Navbar = () => {
                         </li>
                     ))}
                 </ul>
-                </nav>
+                
                 <div className="hidden md:flex justify-center items-center mr-10 gap-3">
                     <SearchBar/>
                     
