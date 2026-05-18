@@ -7,11 +7,9 @@ const Layout = () => {
     const location = useLocation();
     const isContactPage = location.pathname === "/contact";
     return (
-        <section className="w-7xl min-h-screen flex flex-col mx-auto bg-cream-100">
-            <div className={`transition-all duration-700 ${isContactPage ? "animate-blur-out scale 95 pointer-events-none": ""}`}>
-                <Navbar/>
-            </div>
-            <main >
+        <section className="w-full max-w-7xl mx-auto">
+            <Navbar/>
+            <main>
                 <Outlet/>
             </main>
             <Footer/>
